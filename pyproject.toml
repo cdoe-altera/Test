@@ -1,0 +1,19 @@
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-v --tb=short --strict-markers"
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["tests/*", "*/migrations/*", "*/venv/*", "*/.venv/*"]
+
+[tool.coverage.report]
+precision = 2
+show_missing = true
+skip_covered = false
+
+[tool.coverage.html]
+directory = "htmlcov"

@@ -87,21 +87,52 @@ section h3 {
 
 .participants-list {
   margin: 8px 0 0 0;
-  padding-left: 20px;
   max-height: 120px;
   overflow-y: auto;
 }
 
-.participants-list li {
+.participant-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
   margin-bottom: 4px;
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.participant-item:hover {
+  background-color: #e9ecef;
+}
+
+.participant-email {
   color: #555;
   font-size: 13px;
   line-height: 1.4;
+  flex-grow: 1;
 }
 
-.participants-list li:hover {
-  color: #1a237e;
-  font-weight: 500;
+.delete-participant-btn {
+  background: none;
+  border: none;
+  color: #dc3545;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 3px;
+  transition: background-color 0.2s, transform 0.1s;
+  margin-left: 8px;
+}
+
+.delete-participant-btn:hover {
+  background-color: #f8d7da;
+  transform: scale(1.1);
+}
+
+.delete-participant-btn:active {
+  transform: scale(0.95);
 }
 
 .no-participants {
